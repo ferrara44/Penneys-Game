@@ -5,20 +5,25 @@
 char predic1[3];
 char predic2[3];
 int sigue=1;
-
 int secuencia[256];
-int i,j;
-
+int i,j,k=1;
 void jug1(){
-printf("Player 1's Guess: ");
-fgets(predic1, sizeof(3), stdin);
-getchar();
+	printf("Player 1's Guess: ");
+	fgets(predic1, sizeof(3), stdin);
+	getchar();
+	printf(predic1,"\n");
 }
 
 void jug2(){
-printf("Player 2's Guess: ");
-fgets(predic2, sizeof(3), stdin);
-getchar();
+	while (k==1){
+		printf("Player 2's Guess: ");
+		fgets(predic2, sizeof(3), stdin);
+		getchar();
+		if (predic1==predic2){ 
+			printf("Por favor seleccione una predicción distinta a la del jugador 1.\n");}
+		else k=0;
+	}
+		printf(predic2,"\n");
 }
 
 int evaluar(int a){
