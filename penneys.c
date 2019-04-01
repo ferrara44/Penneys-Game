@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-char predic1[5];
-char predic2[5];
+char predic1[3];
+char predic2[3];
 int sigue=1;
 
 int secuencia[256];
@@ -54,8 +54,8 @@ int main(int argc, char *argv[]) {
 		
 		printf("%c", secuencia[i]);
 		
-		if(evaluar(5)==1) sigue=0;
-		if(evaluar2(5)==1) sigue=0;
+		if(evaluar(3)==1) sigue=0;
+		if(evaluar2(3)==1) sigue=0;
 		i++;
 	}
 	
